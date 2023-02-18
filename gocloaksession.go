@@ -1,7 +1,7 @@
 package gocloaksession
 
 import (
-	"github.com/Nerzal/gocloak/v11"
+	"github.com/Nerzal/gocloak/v12"
 	"github.com/go-resty/resty/v2"
 )
 

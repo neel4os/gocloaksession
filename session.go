@@ -5,7 +5,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Nerzal/gocloak/v11"
+	"github.com/Nerzal/gocloak/v12"
 	"github.com/go-resty/resty/v2"
 	"github.com/pkg/errors"
 )
@@ -68,7 +68,7 @@ func NewSession(clientID, clientSecret, realm, uri string, calloptions ...CallOp
 		clientID:                              clientID,
 		clientSecret:                          clientSecret,
 		realm:                                 realm,
-		gocloak:                               gocloak.NewClient(uri),
+		gocloak:                               *gocloak.NewClient(uri),
 		prematureAccessTokenRefreshThreshold:  0,
 		prematureRefreshTokenRefreshThreshold: 0,
 	}
